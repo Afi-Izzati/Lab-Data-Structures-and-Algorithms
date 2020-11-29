@@ -12,7 +12,7 @@ public:
 	} *head, *tail, *ptr;	
 
 	list():head(NULL),tail(NULL){}	// constructor	
-			// destructor
+			
 
 	struct list::node* searchItems(struct list::node*, string);	
 	struct list::node* searchNumList(struct list::node*, int);
