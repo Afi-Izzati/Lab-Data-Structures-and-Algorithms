@@ -2,16 +2,16 @@
 using namespace std;
 int queue[100], n = 100, front = - 1, rear = - 1;
 void Insert() {
-   int val;
+   int x;
    if (rear == n - 1)
    cout<<"Queue Overflow"<<endl;
    else {
       if (front == - 1)
       front = 0;
-      cout<<"Insert the element in queue : "<<endl;
-      cin>>val;
+      cout<<"Insert the element in queue : ";
+      cin>>x;
       rear++;
-      queue[rear] = val;
+      queue[rear] = x;
    }
 }
 void Delete() {
@@ -19,7 +19,7 @@ void Delete() {
       cout<<"Queue Underflow ";
       return ;
    } else {
-      cout<<"Element deleted from queue is : "<< queue[front] <<endl;
+      cout<<"Element deleted from queue is : "<< queue[front] <<endl ;
       front++;;
    }
 }
@@ -34,15 +34,15 @@ void Display() {
    }
 }
 int main() {
-   int ch;
+   int y;
    cout<<"1) Insert element to queue"<<endl;
    cout<<"2) Delete element from queue"<<endl;
    cout<<"3) Display all the elements of queue"<<endl;
    cout<<"4) Exit"<<endl;
    do {
-      cout<<"Enter your choice : "<<endl;
-      cin>>ch;
-      switch (ch) {
+      cout<<"Enter your choice : ";
+      cin>>y;
+      switch (y) {
          case 1: Insert();
          break;
          case 2: Delete();
@@ -53,7 +53,6 @@ int main() {
          break;
          default: cout<<"Invalid choice"<<endl;
       }
-   } while(ch!=4);
+   } while(y!=4);
    return 0;
 }
-
