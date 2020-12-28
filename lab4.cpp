@@ -10,13 +10,14 @@ void Insert() {
       front = 0;
       cout<<"Insert the integer to the queue : ";
       cin>>x;
+     
       rear++;
       queue[rear] = x;
    }
 }
 void Delete() {
    if (front == - 1 || front > rear) {
-      cout<<"front is not equal to rear(empty)";
+      cout<<"front is not equal to rear(empty)" << endl;
       return ;
    } else {
       cout<<"Element deleted from queue is : "<< queue[front] <<endl ;
@@ -42,6 +43,7 @@ int main() {
    do {
       cout<<"Enter your choice : ";
       cin>>y;
+      cout << endl;
       switch (y) {
          case 1: Insert();
          break;
