@@ -3,17 +3,17 @@ using namespace std;
 
 void selectionSort(int a[], int n) {
 	
-   int i, j, min, temp;
+   int i, a, list, temp;
    
    for (i = 0; i < n - 1; i++) {
    	
-      min = i;
+      list = i;
       for (j = i + 1; j < n; j++)
-      if (a[j] < a[min])
-      min = j;
+      if (a[j] < a[list])
+      list = j;
       temp = a[i];
-      a[i] = a[min];
-      a[min] = temp;
+      a[i] = a[list];
+      a[list] = temp;
       
    }
 }
